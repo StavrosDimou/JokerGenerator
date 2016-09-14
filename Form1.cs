@@ -13,24 +13,17 @@ namespace Joker
 {
     public partial class Form1 : Form
     {
-        public static string currentVersion = "0.0.1.0";
-        DateTime rightNow;
-
+        public static string currentVersion = "0.0.1.2";
+        
         public Form1()
         {
             InitializeComponent();
-            rightNow = DateTime.Now;
-            label1.Text = string.Format("{0:dd/MM/yy     H:mm}", rightNow);  //timeNow;
+            label1.Text = string.Format("{0:dd/MM/yy     H:mm}", DateTime.Now);  //timeNow;
         }
 
         private void NeoDeltioButton_Click(object sender, EventArgs e)
         {
-            this.NeoDeltio();
-        }
-
-        #region Neo Deltio ()
-        private void NeoDeltio()
-        {
+            #region
             Random RanGen = new Random();
             List<byte> result = new List<byte>();
             for (byte i = 0; i < 5; i++)
@@ -42,9 +35,7 @@ namespace Joker
                 }
                 result.Add(curValue);
             }
-
-            byte arithmosJoker = (byte)RanGen.Next(1, 20);
-
+            
             result.Sort();
 
             ProtosArithmos.Text = Convert.ToString(result[0]);
@@ -52,17 +43,19 @@ namespace Joker
             TritosArithmos.Text = Convert.ToString(result[2]);
             TetartosArithmos.Text = Convert.ToString(result[3]);
             PemptosArithmos.Text = Convert.ToString(result[4]);
-            JokerArithmos.Text = Convert.ToString(arithmosJoker);
+            JokerArithmos.Text = Convert.ToString(RanGen.Next(1,20));
+            #endregion
         }
-        #endregion
-        
         private void πληροφορίεςToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            infoWindow newWindow = new infoWindow();
-            newWindow.Show();
+            ShowNewInfoWindow();
         }
         
         private void InfoButton_Click(object sender, EventArgs e)
+        {
+            ShowNewInfoWindow();
+        }
+        private void ShowNewInfoWindow()
         {
             infoWindow newWindow = new infoWindow();
             newWindow.Show();
