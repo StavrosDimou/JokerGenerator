@@ -143,12 +143,12 @@ namespace Joker
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.linkLabel2.Location = new System.Drawing.Point(20, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(79, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(228, 16);
+            this.linkLabel2.Size = new System.Drawing.Size(109, 16);
             this.linkLabel2.TabIndex = 10;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "http://stavrosdimou.blogspot.gr/";
+            this.linkLabel2.Text = "Stavros Dimou";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // tableLayoutPanel3
@@ -181,7 +181,6 @@ namespace Joker
             this.MinimizeBox = false;
             this.Name = "infoWindow";
             this.Text = "Σχετικά";
-            this.Load += new System.EventHandler(this.infoWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
